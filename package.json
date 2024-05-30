@@ -4,6 +4,8 @@
   "description": "",
   "main": "dist/app.js",
   "scripts": {
+    "lint": "eslint 'src/**/*.{js,ts}'",
+    "format": "prettier --write 'src/**/*.{js,ts}'",
     "start": "node dist/app.js",
     "dev": "ts-node src/app.ts",
     "build": "tsc",

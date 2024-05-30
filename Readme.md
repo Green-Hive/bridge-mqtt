@@ -74,7 +74,7 @@ Si vous souhaitez contribuer à ce projet, veuillez suivre les étapes suivantes
 
 ## Auteur
 
-- Votre nom - [Votre email](mailto:votre-email@example.com)
+- plegulluche - [Mail](mailto:plegulluche@gmail.com)
 
 ## Licence
 

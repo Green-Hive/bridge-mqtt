@@ -98,5 +98,3 @@ Pour mettre à jour le serveur avec une nouvelle version du code :
    pm2 restart mqtt-bridge-server
    ```
 ```
-
-Vous pouvez maintenant copier ce contenu et le coller directement dans votre fichier `PRODUCTION.md`.

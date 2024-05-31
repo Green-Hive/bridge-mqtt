@@ -29,7 +29,7 @@ Ce projet est un serveur backend Node.js qui sert de pont entre un serveur MQTT 
 
 1. Créez un fichier `.env` à la racine du projet et configurez les variables d'environnement suivantes :
    ```
-   PORT=3000
+   PORT=le port sur lequel tourne l'appli
    MQTT_BROKER_URL="url du serveur mqtt "
    MQTT_TOPIC=test/sensor/data
    APP_URL=http://url-de-votre-application/api/hives/data
@@ -51,6 +51,10 @@ Ce projet est un serveur backend Node.js qui sert de pont entre un serveur MQTT 
 2. Le serveur se connectera automatiquement au serveur MQTT spécifié et s'abonnera au topic configuré.
 
 3. Lorsque des données sont reçues du topic MQTT, le serveur les traitera et les enverra à l'application via une requête POST à l'URL spécifiée.
+
+## Déploiement en production
+
+Pour les instructions détaillées sur le déploiement de ce serveur en production sur un serveur Debian 12, veuillez consulter le fichier [PRODUCTION.md](./PRODUCTION.md).
 
 ## Structure du projet
 

@@ -1,6 +1,3 @@
-Voici le contenu du fichier `PRODUCTION.md` au format Markdown, prêt à être copié et collé :
-
-```markdown
 # Déploiement en production sur Debian 12
 
 Ce guide vous explique comment déployer le serveur MQTT Bridge en production sur un serveur Debian 12.

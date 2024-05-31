@@ -1,5 +1,6 @@
 import mqtt from 'mqtt';
 import dotenv from 'dotenv';
+import { compareHash, hashString } from '../utils';
 
 
 dotenv.config();
@@ -42,10 +43,15 @@ export const setupMQTT = () => {
 
       try {
         // Envoyer les données à l'application via une requête POST en utilisant fetch
+        const hashed_token = await hashString(`${process.env.USER_TOKEN}`);
+        console.log('Hashed token:', hashed_token);
+        const isSimilar = await compareHash(`${process.env.USER_TOKEN}`, hashed_token);
+        console.log('Is similar:', isSimilar);
         const response = await fetch(`${process.env.APP_URL}/hives/data`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${hashed_token}`,
           },
           body: JSON.stringify(hiveData),
         });

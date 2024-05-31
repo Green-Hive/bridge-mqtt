@@ -48,7 +48,7 @@ export const setupMQTT = () => {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${hashed_token}`,
+            'Authorization': `${hashed_token}`,
           },
           body: JSON.stringify(hiveData),
         });

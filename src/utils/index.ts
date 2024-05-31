@@ -1,10 +1,8 @@
 import bcrypt from 'bcrypt';
 
 export const hashString = async (input: string): Promise<string> => {
-  const saltRounds = 10;
   try {
-    const salt = await bcrypt.genSalt(saltRounds);
-    const hashed = await bcrypt.hash(input, salt);
+    const hashed = await bcrypt.hash(input, 10);
     return hashed;
   } catch (error) {
     throw new Error('Error hashing the string');

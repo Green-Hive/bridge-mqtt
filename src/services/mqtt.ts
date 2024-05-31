@@ -6,13 +6,13 @@ dotenv.config();
 
 export const setupMQTT = () => {
   // Se connecter au broker MQTT
-  const mqttClient = mqtt.connect('mqtt://82.66.182.144:1883');
+  const mqttClient = mqtt.connect(`${process.env.MQTT_BROKER_URL}`);
 
   // Gérer l'événement de connexion au broker MQTT
   mqttClient.on('connect', () => {
     console.log('Connected to MQTT broker');
     // S'abonner au topic 'sensor/data' pour recevoir les données des capteurs
-    mqttClient.subscribe('sensor/data');
+    mqttClient.subscribe(`${process.env.MQTT_TOPIC}`);
   });
 
   // Gérer l'événement de réception d'un message MQTT

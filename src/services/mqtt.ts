@@ -1,6 +1,6 @@
 import mqtt from 'mqtt';
 import dotenv from 'dotenv';
-import { compareHash, hashString } from '../utils';
+import { hashString } from '../utils';
 
 
 dotenv.config();
@@ -49,6 +49,7 @@ export const setupMQTT = () => {
           headers: {
             'Content-Type': 'application/json',
             'Authorization': `${hashed_token}`,
+            'User': `${data.user.hiveId}`
           },
           body: JSON.stringify(hiveData),
         });
